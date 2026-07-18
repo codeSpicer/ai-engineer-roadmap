@@ -1,0 +1,65 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+.env
+.venv/
+pip-log.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Node / JS (some projects may add package.json later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+.coverage
+htmlcov/
+
+# Local model artifacts / large data (don't commit weights, datasets)
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.onnx
+data/raw/
+data/processed/
+*.db
+*.sqlite
+*.duckdb
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+
+# Command Code internal learning dir
+.commandcode/
+
+# Local notes / scratch
+*.local.md
+scratch/
+tmp/
