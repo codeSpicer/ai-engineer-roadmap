@@ -7,11 +7,13 @@ one or more nodes on that roadmap, and several projects deliberately go *beyond*
 ## How this is organized
 
 ```
-Phase (folder) -> Skill (folder) -> Project (folder with README.md)
+Phase (folder) -> Skill (folder) -> Project (folder with README.md + Interview-Questions.md)
 ```
 
-Work top-to-bottom. Each project has its own `README.md` with concepts, prerequisites,
-learning objectives, build steps, reference repos, and a "definition of done."
+Work top-to-bottom. Each project has its own `README.md` (concepts, prerequisites,
+learning objectives, phased build steps with checkboxes, core experiments with tables to fill,
+reference repos, definition of done) and `Interview-Questions.md` (in-depth Q&A grounded in
+YOUR measured numbers — complete the project, then quiz yourself out loud from it).
 
 ## Phases & Skills
 
@@ -21,10 +23,11 @@ learning objectives, build steps, reference repos, and a "definition of done."
 | Phase 2 – Building AI Apps | RAG, Agents (incl. MCP) | Build real LLM-powered applications |
 | Phase 3 – Quality & Safety | Evals (incl. Dataset Eng), Guardrails | Measure and constrain those apps |
 | Phase 4 – Customization & Production | Fine-Tuning (incl. Dataset Eng), LLMOps | Customize the model and ship it |
+| Phase 5 – Synthesis & Frontier ([production scaling](./Phase-5-Synthesis-and-Frontier/Production-At-Scale.md)) | Capstone + frontier tracks | One deployed end-to-end system + crucial topics beyond Phases 1–4 |
 
 ## Suggested order
 
-`Foundations -> RAG -> Agents -> Evals -> Guardrails -> Fine-Tuning -> LLMOps`
+`Foundations -> RAG -> Agents -> Evals -> Guardrails -> Fine-Tuning -> LLMOps -> Capstone (+ 2–3 frontier tracks) -> remaining frontier`
 
 ## Mapping to roadmap.sh/ai-engineer
 
@@ -35,44 +38,38 @@ learning objectives, build steps, reference repos, and a "definition of done."
 - **Guardrails** -> AI Safety & Ethics node (prompt injection, bias, privacy) — hands-on enforcement
 - **Fine-Tuning** -> Fine-tuning node (roadmap covers hosted fine-tuning; our projects go deeper: local QLoRA + DPO); Dataset Engineering folded in
 - **LLMOps** -> Deployment / Production Architecture / Observability
+- **Phase 5** -> Beyond the roadmap by design: the capstone assembles everything above into one
+  deployed system (see `Phase-5-Synthesis-and-Frontier/README.md`), and frontier tracks cover what
+  Phases 1–4 deliberately left out (reasoning-model post-training, long-context economics, multimodal
+  docs, inference optimization, routing/cascades, ACL-aware retrieval, security red-teaming, agent evals,
+  feedback flywheel).
 
-## Consciously excluded (optional background reading)
+## Consciously folded into Phase 5 (not standalone phases)
 
-- Multimodal AI (vision, audio, speech, image generation)
-- Standalone Inference Optimization (partially covered inside LLMOps)
+- Multimodal document intelligence (§7: vision-parse, audio pipeline, CLIP search — the production slice
+  of multimodal that RAG systems actually need)
+- Inference optimization (§6: runtime × quant benchmarking on YOUR stack — the applied slice)
 
-## Gap topics to add (from cohort comparison — interview-relevant)
+## Gap topics — status (were open items, now placed)
 
-These are not yet full projects but are tracked here so they don't get lost. Highest
-priority items first.
+Prior cohort comparison flagged two HIGHEST-priority gaps with zero content. Both now live in
+`Phase-5-Synthesis-and-Frontier/` (README §1–§2 + `Interview-Questions.md` Parts 1–2) — quiz against those.
 
-### Agentic system design / agents-at-scale / MCP vs API tradeoffs — HIGHEST PRIORITY
-No content exists for this today. This is the "real engineering" gap (designing agent
-systems that hold up at scale), and what mid/senior AI eng interviews increasingly probe.
-Treat as a study + design-exercise piece, not necessarily a coded project:
-- Agents at scale: concurrency, idempotency, retries, timeouts, state/persistence, failure isolation.
-- MCP vs API wrappers: when a formal protocol (MCP) earns its overhead vs a thin client/SDK.
-- Design tradeoffs: orchestration patterns, cost/latency, observability, human-in-the-loop gates.
-- Deliverable: 1–2 architecture write-ups (e.g. "design a customer-support agent for 10k req/day")
-  with explicit tradeoff discussion. Build last, after Agents + LLMOps.
+### Agentic system design / agents-at-scale / MCP vs API tradeoffs — PLACED (Phase 5 §2 + Q&A Part 2)
+Design write-ups (not a coded project): agents-at-scale mechanics (concurrency, idempotency, retries,
+timeouts, state, failure isolation), MCP-vs-thin-client decisions per YOUR measured hop cost, centralized
+vs decentralized orchestration, cost/latency, HITL gates.
+- Do alongside the capstone (design thinking while building).
 
-### Capstone project (synthesis) — HIGHEST PRIORITY
-Zero synthesis project exists; the roadmap ends at Phase 4 serving with nothing tying
-RAG + agents + evals + fine-tuning into one system. This is the single best portfolio
-artifact — one polished capstone beats four disconnected phase projects.
-- Build it LAST, reusing pieces from every earlier phase (RAG retrieval + agent orchestration
-  + eval gate + a fine-tuned or guarded component).
-- Deliverable: one deployed, evaluated, documented system + a metrics-for-evaluation section.
-  This is the project to feature on your /reading page and resume.
+### Capstone project (synthesis) — PLACED (Phase 5 §1 + Q&A Part 1)
+Build LAST: one deployed, evaluated, guarded system reusing every phase (RAG + agent + eval gate +
+guards + tuned component + observability + canary) + metrics page + demo. The resume centerpiece.
 
-### Context engineering & memory systems — MEDIUM-HIGH
-See the deep-dive note in Agents Project B. Name it explicitly; don't leave it implied.
+### Context engineering & memory systems — COVERED (Agents Project B, README deep-dive + Interview Q&A Part 6)
 
-### LLM theory (attention, pre/post-training, lifecycle) — reading only
-See the reading note in Foundations Project A. Articulate, don't build.
+### LLM theory (attention, pre/post-training, lifecycle) — COVERED (Foundations Project A, reading note + Q&A)
 
-### LLM-as-Judge + fine-tune vs prompt vs RAG tradeoff — MEDIUM
-See the add-on note in Evals Project A. Cheap on top of existing eval infra.
+### LLM-as-Judge + fine-tune vs prompt vs RAG tradeoff — COVERED (Evals Project A, `judge.py` add-on + Interview Q&A Part 6)
 
 ## Cross-cutting prerequisites
 
