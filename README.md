@@ -15,6 +15,10 @@ learning objectives, phased build steps with checkboxes, core experiments with t
 reference repos, definition of done) and `Interview-Questions.md` (in-depth Q&A grounded in
 YOUR measured numbers — complete the project, then quiz yourself out loud from it).
 
+Companions: [MODELS.md](./MODELS.md) (local model tiers for Apple-silicon laptops — which model
+plays which role, and when a hosted fallback is right) and [PACING.md](./PACING.md)
+(weekend-by-weekend schedule for Phases 2–5, built for a 9–5 + weekends rhythm).
+
 ## Phases & Skills
 
 | Phase | Skills | Focus |
@@ -75,3 +79,5 @@ guards + tuned component + observability + canary) + metrics page + demo. The re
 
 Python + virtual environments, Git basics, an LLM API key **or** Ollama for local models,
 comfort with JSON/YAML. Fine-Tuning additionally needs a GPU (free Colab T4 works).
+Local model picks per role (generator vs judge vs router) for 16GB Macs live in
+[MODELS.md](./MODELS.md); the weekend pacing plan lives in [PACING.md](./PACING.md).

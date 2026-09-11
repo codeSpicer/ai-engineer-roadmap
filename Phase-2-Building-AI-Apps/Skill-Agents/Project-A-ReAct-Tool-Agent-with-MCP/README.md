@@ -27,7 +27,8 @@ MCP (server/client, discovery, transport decoupling), framework-free vs framewor
 ## Prerequisites
 
 - Foundations Project A (sampling params, system/user roles, JSON mode — all reused under the hood)
-- Ollama with a function-calling-capable model (`llama3.2:latest` minimum; `qwen2.5:7b` better at tool use)
+- Ollama with a function-calling-capable model (`llama3.2:latest` minimum for plumbing; `qwen3:8b` or
+  `qwen2.5:7b` for reliable tool-calling — tier guide for 16GB Macs in root `MODELS.md`)
 - `pip install ollama mcp` (+ `requests` for web-search/API tools)
 
 ## Learning objectives

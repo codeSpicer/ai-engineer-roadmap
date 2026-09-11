@@ -27,7 +27,9 @@ adversarial conversation testing.
 ## Prerequisites
 
 - Guardrails Project A (validators intuition + `adversarial.jsonl` — extended here to multi-turn)
-- `pip install nemoguardrails` + Ollama model; YAML + basic Colang (`.co`) syntax
+- `pip install nemoguardrails` + Ollama model; YAML + basic Colang (`.co`) syntax. Pin an exact
+  nemoguardrails version in `requirements.txt` and read the matching docs release — the NeMo↔Ollama
+  wiring and Colang versions have shifted across releases, and version drift is the #1 setup trap here
 - A RAG pipeline to guard (your Phase 2 RAG-A — retrieval rails need a real retriever)
 
 ## Learning objectives

@@ -2,9 +2,9 @@
 
 **Phase:** 5 — Synthesis & Frontier · **Difficulty:** Advanced · **Build this LAST (mostly)**
 
-Companions in this folder: `Interview-Questions.md` (Capstone + Agents-at-Scale Q&A, Parts 1–3 —
-do it against your live build) and `Production-At-Scale.md` (how the capstone and frontier techniques
-run as production products — read after the capstone is live).
+Companions in this folder: `Interview-Questions.md` (Parts 1–3: capstone, agents-at-scale, and the
+full-arc synthesis — do it against your live build) and `Production-At-Scale.md` (how the capstone
+and frontier techniques run as production products — read after the capstone is live).
 
 Phases 1–4 taught isolated skills. Phase 5 does the two things that turn skills into a hireable
 profile: (1) a **capstone** that fuses every phase into one deployed, evaluated system — the single
@@ -105,6 +105,8 @@ muscle; design write-ups do.
   and write a 1-page "DPO vs GRPO, when each" note.
 - [ ] Distill: collect chain-of-thought traces from a strong reasoning model on 200 of YOUR domain tasks →
   SFT YOUR small model on (question, trace, answer) → before/after on held-out REASONING accuracy (not format).
+  Local trace source: `deepseek-r1:8b` (or `:14b`, alone on 16GB) emits readable reasoning traces — no API
+  budget needed (see root `MODELS.md`).
 - [ ] Report the distillation tax (general capability + refusal re-checks — same discipline as FT-A/B).
 **Deliverable:** distilled checkpoint + reasoning-accuracy table + DPO-vs-GRPO note. **Extends:** FT-A/B.
 
@@ -116,6 +118,8 @@ and "lost in the middle" punishes naive stuffing. No phase measured this boundar
 - [ ] Lost-in-the-middle probe: place the answer chunk at 5 positions in a 100k prompt, record accuracy per
   position on YOUR tasks (quote the curve).
 - [ ] Caching: enable prompt caching on YOUR system prompt + stable prefix; measure $/request and TTFT delta.
+  (The $ delta needs a hosted API — Anthropic/OpenAI. Fully-local proxy: measure TTFT on a warm vs cold Ollama
+  context for the same long prefix; the accuracy and latency halves of this track are local either way.)
 - [ ] Tradeoff table: same 20 questions via (a) full-context stuff, (b) YOUR RAG pipeline — accuracy, cost,
   latency per route, with a routing rule ("<N tokens stable prefix → stuff; else retrieve").
 **Deliverable:** position-accuracy curve + caching delta + routing rule with numbers. **Extends:** RAG-A/B, LLMOps-A.
@@ -223,7 +227,7 @@ frontier picks for YOUR capstone idea (2–3 tracks, e.g. §7+§5 for a docs-ass
 remaining frontier tracks (any order — each is self-contained)
         │
         ▼
-root Q&A files as the final oral exam (`Interview-Questions.md` Parts 1–2, in this folder)
+root Q&A files as the final oral exam (`Interview-Questions.md` Parts 1–3, in this folder)
 ```
 
 **Portfolio order:** capstone FIRST (demo + metrics), then one frontier artifact that shows range (red-team

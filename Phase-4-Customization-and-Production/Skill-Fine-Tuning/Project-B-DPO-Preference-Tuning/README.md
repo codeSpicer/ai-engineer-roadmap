@@ -65,7 +65,7 @@ pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" 
 
 python -m dpo_tuning build-pairs --n 500 --audit 30
 python -m dpo_tuning train --base-sft ../qlora-sft/adapters --beta 0.1
-python -m dpo_tuning winrate --a ../qlora-sft/adapters --b ./dpo_adapters --judge llama3.2:latest
+python -m dpo_tuning winrate --a ../qlora-sft/adapters --b ./dpo_adapters --judge qwen2.5:14b
 ```
 
 | Knob | Default start | Meaning / what to try |
@@ -73,7 +73,7 @@ python -m dpo_tuning winrate --a ../qlora-sft/adapters --b ./dpo_adapters --judg
 | `β (beta)` | `0.1` | leash length — sweep 0.01 / 0.1 / 0.5 (experiment 2) |
 | pair count | `300–1000` | fewer, cleaner pairs beat many noisy ones (prove it in experiment 3) |
 | epochs | `1` | DPO overfits fast on small pair sets; held-out win-rate decides |
-| judge | pinned model | win-rate judge version logged — judges have biases (Evals A lesson) |
+| judge | pinned model | your STRONGEST local tier (12–14B — root `MODELS.md`), version logged; judges have biases (Evals A lesson) |
 
 ## Project layout (files you will create)
 

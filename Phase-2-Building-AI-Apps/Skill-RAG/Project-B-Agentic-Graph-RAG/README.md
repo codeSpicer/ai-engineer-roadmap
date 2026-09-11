@@ -27,7 +27,9 @@ context assembly, confidence-gated retry (self-correction), full trajectory trac
 
 - RAG Project A completed and working (this project imports its retriever + reranker + generator)
 - `pip install networkx spacy` (Neo4j optional — default is in-memory NetworkX so zero infra)
-- An Ollama chat model for router / extractor / generator (`llama3.2:latest` or better)
+- An Ollama chat model for router / extractor / generator (`llama3.2:latest` minimum — but router /
+  decompose / triple-extract are where small models crack first; `qwen3:8b` routes noticeably more
+  reliably, and the 12–14B tier is the fallback if misroutes survive prompt fixes. Tier guide: root `MODELS.md`)
 
 ## Learning objectives
 
