@@ -77,7 +77,8 @@ guards + tuned component + observability + canary) + metrics page + demo. The re
 
 ## Cross-cutting prerequisites
 
-Python + virtual environments, Git basics, an LLM API key **or** Ollama for local models,
+Python + [uv](https://docs.astral.sh/uv/) for envs and installs (`uv venv`, `uv pip install`),
+Git basics, an LLM API key **or** Ollama for local models,
 comfort with JSON/YAML. Fine-Tuning additionally needs a GPU (free Colab T4 works).
 Local model picks per role (generator vs judge vs router) for 16GB Macs live in
 [MODELS.md](./MODELS.md); the weekend pacing plan lives in [PACING.md](./PACING.md).

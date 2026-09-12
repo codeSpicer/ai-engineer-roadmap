@@ -13,7 +13,7 @@ not 100%.
    its tables are filled — not when its weekends run out. Slip the next block before you skip an
    ablation table; the tables are your interview capital.
 2. **Friday-night setup (15–30 min):** read the coming build phase's checkboxes, queue
-   `ollama pull` / `pip install`. Saturday morning should start *building*, not downloading.
+   `ollama pull` / `uv pip install`. Saturday morning should start *building*, not downloading.
 3. **Sunday closeout (15 min):** fill the "Observations worth writing down" bullets while fresh —
    they become interview answers verbatim.
 4. **Re-calibrate after RAG-A.** It's your first intermediate project — your actual weekend count

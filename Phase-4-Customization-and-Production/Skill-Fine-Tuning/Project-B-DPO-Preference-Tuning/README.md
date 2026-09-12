@@ -61,7 +61,7 @@ low β = long leash (strong alignment, risk of degeneration/reward hacking). You
 
 ```bash
 # Same Colab T4 as Project A; start FROM your SFT adapter
-pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" transformers datasets trl
+uv pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" transformers datasets trl
 
 python -m dpo_tuning build-pairs --n 500 --audit 30
 python -m dpo_tuning train --base-sft ../qlora-sft/adapters --beta 0.1

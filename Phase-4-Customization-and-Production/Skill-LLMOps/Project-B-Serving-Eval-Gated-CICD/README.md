@@ -31,7 +31,7 @@ releases (traffic splitting, bake time, promotion/rollback criteria), rollback m
 
 - Evals Project B (eval gate + thresholds — imported, not rebuilt) and LLMOps A (baselines + alerts)
 - A model artifact to serve (your DPO/SFT GGUF or base — serving YOUR model closes the loop)
-- Docker, minikube + `kubectl`, GitHub Actions; `pip install fastapi uvicorn` (+ vLLM optional)
+- Docker, minikube + `kubectl`, GitHub Actions; `uv pip install fastapi uvicorn` (+ vLLM optional)
 
 ## Learning objectives
 

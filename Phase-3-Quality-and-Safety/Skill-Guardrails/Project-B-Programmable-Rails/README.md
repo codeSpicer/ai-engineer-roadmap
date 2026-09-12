@@ -27,7 +27,7 @@ adversarial conversation testing.
 ## Prerequisites
 
 - Guardrails Project A (validators intuition + `adversarial.jsonl` — extended here to multi-turn)
-- `pip install nemoguardrails` + Ollama model; YAML + basic Colang (`.co`) syntax. Pin an exact
+- `uv pip install nemoguardrails` + Ollama model; YAML + basic Colang (`.co`) syntax. Pin an exact
   nemoguardrails version in `requirements.txt` and read the matching docs release — the NeMo↔Ollama
   wiring and Colang versions have shifted across releases, and version drift is the #1 setup trap here
 - A RAG pipeline to guard (your Phase 2 RAG-A — retrieval rails need a real retriever)
@@ -70,8 +70,8 @@ both and orchestrates. Change behavior by editing config, not Python — that ed
 ## Setup
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt   # nemoguardrails + ollama
+uv venv && source .venv/bin/activate
+uv pip install -r requirements.txt   # nemoguardrails + ollama
 ollama serve && ollama pull llama3.2:latest
 
 # config.yml points at your Ollama model; flows.co defines the approved bot path

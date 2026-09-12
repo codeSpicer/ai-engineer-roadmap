@@ -28,7 +28,7 @@ honesty (means, distributions, sample size), comparison reports as auditable art
 ## Prerequisites
 
 - RAG Project A running (the system under test — harness imports its `ask` path)
-- `pip install ragas datasets pandas ollama` (+ `deepeval` optional for cross-checking judges)
+- `uv pip install ragas datasets pandas ollama` (+ `deepeval` optional for cross-checking judges)
 - An Ollama chat model for generation AND judging — asymmetric is realistic: generate on the 7–8B
   workhorse, judge on the 12–14B tier (tier guide: root `MODELS.md`); record both. If the judge still
   fails your human-agreement check at 14B, a hosted judge for scoring runs only is a legitimate
@@ -72,8 +72,8 @@ and judge-based quality metrics (Ragas — expensive, biased, needs validation).
 ## Setup
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+uv venv && source .venv/bin/activate
+uv pip install -r requirements.txt
 ollama serve && ollama pull llama3.2:latest
 
 # Point at your Phase 2 project; score the three configs

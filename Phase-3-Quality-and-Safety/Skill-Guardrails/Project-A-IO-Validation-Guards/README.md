@@ -26,7 +26,7 @@ instruction + decoding constraint + guard layer), guard latency budget, adversar
 ## Prerequisites
 
 - Foundations Project A (prompt roles, JSON mode — guards sit around those same calls)
-- `pip install guardrails-ai fastapi uvicorn` + Hub validators (`guardrails hub install ...`)
+- `uv pip install guardrails-ai fastapi uvicorn` + Hub validators (`guardrails hub install ...`)
 - Ollama running (any chat model)
 
 ## Learning objectives
@@ -65,8 +65,8 @@ evidence-driven (which guard fires most? which false-positives?).
 ## Setup
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+uv venv && source .venv/bin/activate
+uv pip install -r requirements.txt
 guardrails hub install hub://guardrails/pii_identification hub://guardrails/toxic_language  # + others you pick
 ollama serve && ollama pull llama3.2:latest
 

@@ -66,7 +66,7 @@ QLoRA 7B ≈ fits 16GB T4 (4-bit base ~4GB + adapters + paged optimizer). That g
 
 ```bash
 # Colab T4 (free): Runtime → Change runtime → T4 GPU
-pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" transformers datasets peft trl
+uv pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" transformers datasets peft trl
 
 # Local inference of the RESULT needs only Ollama (no GPU):
 ollama create my-sft -f Modelfile.gguf

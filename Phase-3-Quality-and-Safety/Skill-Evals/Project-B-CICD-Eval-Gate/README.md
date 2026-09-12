@@ -28,7 +28,7 @@ flakiness control for LLM tests (seeds, sampling, retries), gate-vs-advisory mod
 ## Prerequisites
 
 - Evals Project A done (golden set + metric definitions are the test cases — no new dataset work)
-- `pip install deepeval pytest` (+ your app importable as a module)
+- `uv pip install deepeval pytest` (+ your app importable as a module)
 - Git + GitHub repo with Actions enabled; YAML basics
 
 ## Learning objectives
@@ -63,7 +63,7 @@ in repo), or both. Floors catch rot; deltas catch regressions that stay above th
 ## Setup
 
 ```bash
-pip install deepeval pytest
+uv pip install deepeval pytest
 export OPENAI_API_KEY=...        # local only — never commit; CI uses repo Secrets
 
 # Local: green first, then prove it can go red

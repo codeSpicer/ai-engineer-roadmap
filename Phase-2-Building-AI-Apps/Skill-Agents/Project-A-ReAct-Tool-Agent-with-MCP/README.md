@@ -29,7 +29,7 @@ MCP (server/client, discovery, transport decoupling), framework-free vs framewor
 - Foundations Project A (sampling params, system/user roles, JSON mode — all reused under the hood)
 - Ollama with a function-calling-capable model (`llama3.2:latest` minimum for plumbing; `qwen3:8b` or
   `qwen2.5:7b` for reliable tool-calling — tier guide for 16GB Macs in root `MODELS.md`)
-- `pip install ollama mcp` (+ `requests` for web-search/API tools)
+- `uv pip install ollama mcp` (+ `requests` for web-search/API tools)
 
 ## Learning objectives
 
@@ -66,8 +66,8 @@ The trace (every Thought/Action/Observation with timestamps) is the primary arti
 ## Setup
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+uv venv && source .venv/bin/activate
+uv pip install -r requirements.txt
 ollama serve
 ollama pull llama3.2:latest        # or qwen2.5:7b for stronger tool use
 

@@ -29,7 +29,7 @@ context/memory mapping (checkpoint state as persistent memory), multi-agent fail
 
 - Agents Project A (agent loop intuition + reusable `tools.py`)
 - LangGraph basics (`StateGraph`, reducers, `MemorySaver`/`SqliteSaver`, `interrupt`)
-- Async Python basics; `pip install langgraph langgraph-checkpoint-sqlite ollama`
+- Async Python basics; `uv pip install langgraph langgraph-checkpoint-sqlite ollama`
 
 ## Learning objectives
 
@@ -66,8 +66,8 @@ Checkpointer: `SqliteSaver` — every node completion persists; resume = reload 
 ## Setup
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+uv venv && source .venv/bin/activate
+uv pip install -r requirements.txt
 ollama serve && ollama pull llama3.2:latest
 
 # End-to-end: produces report.md + trajectory log

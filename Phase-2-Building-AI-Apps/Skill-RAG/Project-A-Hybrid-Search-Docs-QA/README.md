@@ -24,7 +24,7 @@ abstention via score thresholds, RAG failure taxonomy (retrieval vs generation a
 
 - Foundations Projects A & B completed (you reuse embeddings + Chroma + token discipline)
 - Python 3.10+, Ollama running (`nomic-embed-text` + a chat model like `llama3.2:latest`)
-- `pip install chromadb ollama rank-bm25 sentence-transformers pypdf`
+- `uv pip install chromadb ollama rank-bm25 sentence-transformers pypdf`
 
 ## Learning objectives
 
@@ -63,8 +63,8 @@ without it you cannot tell retrieval failures from generation failures.
 ## Setup
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+uv venv && source .venv/bin/activate
+uv pip install -r requirements.txt
 
 ollama serve                              # if not already running
 ollama pull nomic-embed-text              # embedding model (Phase 1 reuse)

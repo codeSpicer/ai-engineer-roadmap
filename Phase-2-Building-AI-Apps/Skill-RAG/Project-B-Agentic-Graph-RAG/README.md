@@ -26,7 +26,7 @@ context assembly, confidence-gated retry (self-correction), full trajectory trac
 ## Prerequisites
 
 - RAG Project A completed and working (this project imports its retriever + reranker + generator)
-- `pip install networkx spacy` (Neo4j optional — default is in-memory NetworkX so zero infra)
+- `uv pip install networkx spacy` (Neo4j optional — default is in-memory NetworkX so zero infra)
 - An Ollama chat model for router / extractor / generator (`llama3.2:latest` minimum — but router /
   decompose / triple-extract are where small models crack first; `qwen3:8b` routes noticeably more
   reliably, and the 12–14B tier is the fallback if misroutes survive prompt fixes. Tier guide: root `MODELS.md`)
@@ -74,7 +74,7 @@ The trace log is the definition of done — "you can trace why a given query too
 ```bash
 # Start from your Project A repo — copy it or build in place
 cp -r ../Project-A-Hybrid-Search-Docs-QA ./agentic-graph-rag && cd agentic-graph-rag
-pip install -r requirements.txt   # + networkx
+uv pip install -r requirements.txt   # + networkx
 ollama pull llama3.2:latest
 
 # Build the graph once from the same corpus

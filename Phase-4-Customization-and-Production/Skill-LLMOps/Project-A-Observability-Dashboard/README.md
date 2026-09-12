@@ -27,7 +27,7 @@ error-rate, guard-fire-rate), PII care in logged payloads (redaction before rete
 ## Prerequisites
 
 - A working app to instrument (Phase 2 RAG-A or Agents-A — richer step structure = better spans)
-- Docker + Docker Compose (Langfuse self-host); `pip install langfuse` (+ framework callback if LangChain)
+- Docker + Docker Compose (Langfuse self-host); `uv pip install langfuse` (+ framework callback if LangChain)
 - Phase 1 token/pricing intuition (cost math reuses it at scale)
 
 ## Learning objectives
@@ -67,7 +67,7 @@ git clone https://github.com/langfuse/langfuse.git && cd langfuse && docker comp
 # UI at localhost:3000 → create project → copy public/secret keys
 
 export LANGFUSE_PUBLIC_KEY=... LANGFUSE_SECRET_KEY=... LANGFUSE_HOST=http://localhost:3000
-pip install langfuse
+uv pip install langfuse
 
 # Instrument: wrap boundaries, tag prompt versions, run traffic, open dashboard
 python -m myapp ask "what is the refund window?"      # traced automatically

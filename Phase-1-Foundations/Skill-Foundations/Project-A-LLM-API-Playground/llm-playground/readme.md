@@ -9,7 +9,7 @@ JSON-constrained output, streaming, and multi-turn chat.
 ## Setup
 
 ```bash
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ollama serve                     # in a separate terminal, if not already running
 ollama pull llama3.2:latest      # or whichever model you want to use
 ```

@@ -10,8 +10,8 @@
 2. Set up the project:
    ```
    mkdir llm-playground && cd llm-playground
-   python3 -m venv .venv && source .venv/bin/activate
-   pip install ollama
+   uv venv && source .venv/bin/activate
+   uv pip install ollama
    ```
 3. Create `cli.py` — start with a single function that calls `ollama.chat()` and prints the response.
 
