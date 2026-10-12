@@ -63,3 +63,20 @@ secrets.json
 *.local.md
 scratch/
 tmp/
+
+# Nested standalone repo: ollama-react-agent (Project A lives in its own git repo).
+# Curriculum docs (README.md, Interview-Questions.md) stay tracked in the parent;
+# everything scaffolded below is child-repo only — keeps parent status clean.
+Phase-2-Building-AI-Apps/Skill-Agents/Project-A-ReAct-Tool-Agent-with-MCP/.git/
+Phase-2-Building-AI-Apps/Skill-Agents/Project-A-ReAct-Tool-Agent-with-MCP/.gitignore
+Phase-2-Building-AI-Apps/Skill-Agents/Project-A-ReAct-Tool-Agent-with-MCP/.venv/
+Phase-2-Building-AI-Apps/Skill-Agents/Project-A-ReAct-Tool-Agent-with-MCP/evals/
+Phase-2-Building-AI-Apps/Skill-Agents/Project-A-ReAct-Tool-Agent-with-MCP/react_agent/
+Phase-2-Building-AI-Apps/Skill-Agents/Project-A-ReAct-Tool-Agent-with-MCP/workdir/
+Phase-2-Building-AI-Apps/Skill-Agents/Project-A-ReAct-Tool-Agent-with-MCP/requirements.txt
+Phase-2-Building-AI-Apps/Skill-Agents/Project-A-ReAct-Tool-Agent-with-MCP/trace.jsonl
+
+# Nested standalone repo: multi-agent-supervisor (Project B code lives in its own git repo).
+# Curriculum docs (Project-B README.md, Interview-Questions.md) stay tracked in the parent;
+# everything scaffolded below is child-repo only — keeps parent status clean.
+Phase-2-Building-AI-Apps/Skill-Agents/Project-B-Multi-Agent-Supervisor/multi-agent-supervisor/

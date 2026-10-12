@@ -145,8 +145,8 @@ debuggable trace" is the line.
 
 **Q12. Model swap: same tasks, two Ollama models. What did you learn about tool-use ability?**
 
-**Answer:** (Quote YOUR table.) Expected shape: the stronger model (`qwen2.5:7b`-class) uses native
-`tool_calls`, needs fewer steps, passes multi-step tasks; the weaker one emits fake JSON, wastes steps
+**Answer:** (Quote YOUR table.) Expected shape: your primary model (`qwen3.5:4b`) uses native
+`tool_calls`, needs fewer steps, passes multi-step tasks; a weaker/plumbing-tier model emits fake JSON, wastes steps
 re-trying malformed calls, fails error-recovery. Columns: native-call compliance (tool_calls vs free-text),
 avg steps per bucket, pass/fail. Conclusion with teeth: tool-use is a MODEL CAPABILITY, not just scaffolding —
 below a competence floor no amount of prompt engineering rescues the agent, and your minimum-viable-model
